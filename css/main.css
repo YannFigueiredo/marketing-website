@@ -10,6 +10,30 @@ h1{
     text-transform: uppercase;
 }
 
+h2{
+    font-size: 1.55em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h3{
+    color: #c8c8c8;
+    font-weight: 400;
+    font-size: 1.3em;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+h4{
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+img{
+    max-width: 100%;
+}
+
 .btn{
     padding: 10px 0;
     display: block;
@@ -48,6 +72,11 @@ h1{
 /*HEADER PRINCIPAL*/
 .header-principal{
     padding: 12px 0;
+    /*width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 9999*/;
 }
 
 .container-header-mobile{
@@ -107,6 +136,10 @@ h1{
 /*APRESENTAÇÃO*/
 .apresentacao{
     margin-top: 30px;
+    background-image: url('../img/slider-bg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
 }
 
 .apresentacao .container-txt h1{
@@ -118,4 +151,66 @@ h1{
     font-weight: 500;
     font-size: 1.1em;
     margin: 10px 0 23px 0;
+}
+
+.apresentacao .container-img{
+    margin-top: 25px;
+    position: relative;
+}
+
+.apresentacao .container-img img{
+    width: 100%;
+}
+
+/*SOBRE*/
+.sobre{
+    margin-top: 120px;
+}
+
+.sobre p{
+    color: #212121;
+    font-size: 0.97em;
+}
+
+#btn-contatar{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+/*SERVIÇOS*/
+.servicos{
+    text-align: center;
+}
+
+.lista-servicos p{
+    color: #c8c8c8;
+    font-weight: 700;
+    font-size: 1em;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.lista-servicos article{
+    background-color: #f0f0f0;
+    margin-top: 25px;
+    border-radius: 3px;
+    padding: 15px 0;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.lista-servicos article:hover{
+    transform: scale(1.04, 1.04);
+    box-shadow: 8px -8px 10px -15px black, -8px 8px 10px -15px black;
+    background-color: white;
+}
+
+.clientes{
+    margin-top: 140px;
+}
+
+.clientes img{
+   filter: grayscale(100%);
+   opacity: 0.6;
 }
