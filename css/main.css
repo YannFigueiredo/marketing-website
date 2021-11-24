@@ -208,9 +208,40 @@ img{
 
 .clientes{
     margin-top: 140px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 25px;
 }
 
-.clientes img{
+.clientes div{
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    padding: 10px 0;
+    transition: transform .2s;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.clientes div a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clientes div a img{
    filter: grayscale(100%);
    opacity: 0.6;
+   max-height: 70px;
+   width: 100%;
+}
+
+.clientes div:hover img {
+    filter: none;
+    opacity: 1;
+}
+
+.clientes div:hover{
+    transform: scale(1.2, 1.2);
 }
