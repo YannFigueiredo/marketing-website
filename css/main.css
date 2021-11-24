@@ -5,9 +5,40 @@
 }
 
 h1{
-    
+    font-size: 0.8em;
     font-weight: 900;
     text-transform: uppercase;
+}
+
+.btn{
+    padding: 10px 0;
+    display: block;
+    border-radius: 3px;
+    transition: background-color 0.7s;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.btn-rosa{
+    color: white;
+    background-color: #fc5185;
+}
+
+.btn-rosa:hover{
+    background-color: #f83771;
+}
+
+.btn-branco{
+    color: #fc5185;
+    border: 1px solid #fc5185;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.btn-branco:hover{
+    color: white;
+    background-color: #f83771;
 }
 
 .container{
@@ -74,3 +105,17 @@ h1{
 }
 
 /*APRESENTAÇÃO*/
+.apresentacao{
+    margin-top: 30px;
+}
+
+.apresentacao .container-txt h1{
+    margin: 0;
+}
+
+.apresentacao .container-txt p{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 10px 0 23px 0;
+}
