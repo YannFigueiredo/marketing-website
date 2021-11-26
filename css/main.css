@@ -25,7 +25,7 @@ h3{
 }
 
 h4{
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-transform: uppercase;
     font-weight: 700;
 }
@@ -181,6 +181,7 @@ img{
 /*SERVIÇOS*/
 .servicos{
     text-align: center;
+    margin-top: 130px;
 }
 
 .lista-servicos p{
@@ -244,4 +245,102 @@ img{
 
 .clientes div:hover{
     transform: scale(1.2, 1.2);
+    box-shadow: 8px -8px 10px -15px black, -8px 8px 10px -15px black;
+}
+
+.contato-telefone{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 40px 5px;
+    background-color: #f0f0f0;
+    padding: 50px 25px 30px 5px;
+    margin-left: 50px;
+    align-items: center;
+}
+
+.contato-telefone p{
+    text-align: left;
+}
+
+.img-clientes{
+    margin-left: -50px;
+}
+
+.img-clientes img{
+    width: 100%;
+    max-height: 130px;
+}
+
+.txt-experiencia{
+    color: #bababa;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.txt-experiencia span{
+    font-size: 5em;
+    font-weight: 900;
+    color: #304b67;
+    letter-spacing: -10px;
+}
+
+.txt-telefone span{
+    color: #737373;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.txt-telefone{
+    color: #bababa;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/*SERVIÇOS RECENTES*/
+.servicos-recentes{
+    margin: 130px 0;
+}
+
+.servicos-recentes header{
+    text-align: center;
+}
+
+.menu-servicos{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 20px 0 35px 0;
+    line-height: 1.7;
+}
+
+.menu-servicos li{
+    list-style-type: none;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.menu-servicos .btn-ativo{
+    color: #fc5185;
+}
+
+.cards-servicos{
+    line-height: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap:20px;
+}
+
+.cards-servicos p{
+    font-size: 0.8em;
+}
+
+.cards-servicos img{
+    border-radius: 3px;
+    width: 100%;
+    cursor: pointer;
 }
