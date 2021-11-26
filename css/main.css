@@ -332,7 +332,11 @@ img{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-gap:20px;
+    grid-gap: 20px;
+}
+
+.cards-servicos figure{
+    transition: margin 0.4s;
 }
 
 .cards-servicos p{
