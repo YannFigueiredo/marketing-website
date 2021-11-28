@@ -13,8 +13,19 @@
 
         <title>Marketing Website</title>
     </head>
-    <body class="container">
-        <header class="header-principal">
+    <body>
+        <div class="modal hidden">
+            <i id="btn-voltar" class="fas fa-caret-left"></i>
+            <div class="container-img">
+                <div class="container-btn-fechar">
+                    <i id="btn-fechar" class="fas fa-times"></i>
+                </div>
+                <img src="img/servicos/1.jpg">
+                <p class="controlador-slide"><span id="imgAtual">x</span> de <span id="totalImg">x</span></p>
+            </div>
+            <i id="btn-avancar" class="fas fa-caret-right"></i>
+        </div>
+        <header class="header-principal container">
             <div class="container-header-mobile">
                 <div class="logo">
                     <img src="img/logo.svg" alt="Logo">
@@ -31,7 +42,7 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
             <section class="apresentacao">
                 <div class="container-txt">
                     <h1>Lorem ipsun dolor aondeai</h1>
@@ -151,7 +162,7 @@
                 </nav>
                 <div class="cards-servicos">
                     <figure>
-                        <img src="img/servicos/1.jpg" alt="Serviço 1">
+                        <img src="img/servicos/1.jpg" alt="Serviço 1" onclick="atribuirImg()">
                         <h4>Lorem ipsun</h4>
                         <p>
                             <span>Website</span>
@@ -224,6 +235,7 @@
         </footer>
         <script src="js/menu.js"></script>
         <script src="js/galeria-servicos.js"></script>
+        <script src="js/galeria-modal.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

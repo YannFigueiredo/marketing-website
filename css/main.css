@@ -4,6 +4,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
 h1{
     font-size: 0.8em;
     font-weight: 900;
@@ -348,3 +353,70 @@ img{
     width: 100%;
     cursor: pointer;
 }
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9998;
+    margin: 0;
+    padding: 0;
+}
+
+.modal .container-img{
+    position: relative;
+}
+
+.modal .container-img img{
+    width: 70vw;
+}
+
+.modal .container-img p{
+    color: #b1b1b1;
+    text-align: right;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.container-btn-fechar{
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    z-index: 9999;
+}
+
+#btn-fechar{
+    color: #a9a9a9;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#btn-voltar{
+    /*position: absolute;
+    left: 0;
+    top: 50vh;*/
+    color: #a9a9a9;
+    font-size: 2.2em;
+}
+
+#btn-avancar{
+    /*position: absolute;
+    right: -10;
+    top: 50vh;*/
+    color: #a9a9a9;
+    font-size: 2.2em;
+    z-index: 9999;
+}
+
+/*CLASSE HIDDEN*/
+.hidden{
+    display: none;
+}
+
+
