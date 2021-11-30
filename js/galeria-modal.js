@@ -12,6 +12,7 @@ function gerenciarGaleriaModal(config){
     var campoImgModal = _this.modal.querySelector('img');
     var camposControleSlide = _this.controladorSlide.querySelectorAll('span');
 
+    desabilitarScroll();
     definirTotalImg();
 
     _this.imgGaleria.forEach(item => {
@@ -26,27 +27,16 @@ function gerenciarGaleriaModal(config){
         _this.modal.classList.add('hidden');
     });
 
-    _this.btnVoltar.addEventListener('click', function(){
-        if(imgAtual - 1 < 0){
-            imgAtual = _this.imgGaleria.length - 1;
-        }else{
-            imgAtual -= 1;
-        }
-
-        campoImgModal.src = _this.imgGaleria[imgAtual].src;
-        camposControleSlide[0].textContent = imgAtual + 1;
+    _this.modal.addEventListener('click', function(e){
+        if(e.target.nodeName != 'IMG' && e.target.nodeName != 'I')
+            _this.modal.classList.add('hidden');
     });
 
-    _this.btnAvancar.addEventListener('click', function(){
-        if(imgAtual + 1 >= _this.imgGaleria.length){
-            imgAtual = 0;
-        }else{
-            imgAtual += 1;
-        }
+    _this.btnVoltar.addEventListener('click', voltarSlide);
 
-        campoImgModal.src = _this.imgGaleria[imgAtual].src;
-        camposControleSlide[0].textContent = imgAtual + 1;
-    });
+    _this.btnAvancar.addEventListener('click', avancarSlide);
+
+    campoImgModal.addEventListener('click', avancarSlide);
 
     function ativarModal(){
         _this.modal.classList.remove('hidden');
@@ -63,5 +53,35 @@ function gerenciarGaleriaModal(config){
 
     function definirTotalImg(){
        camposControleSlide[1].textContent = _this.imgGaleria.length;
+    }
+
+    function desabilitarScroll(){
+        if(!_this.modal.classList.contains('hidden')){
+            document.querySelector('body').style.position = 'fixed';
+        }else{
+            document.querySelector('body').style.position = 'static';
+        }
+    }
+
+    function avancarSlide(){
+        if(imgAtual + 1 >= _this.imgGaleria.length){
+            imgAtual = 0;
+        }else{
+            imgAtual += 1;
+        }
+
+        campoImgModal.src = _this.imgGaleria[imgAtual].src;
+        camposControleSlide[0].textContent = imgAtual + 1;
+    }
+
+    function voltarSlide(){
+        if(imgAtual - 1 < 0){
+            imgAtual = _this.imgGaleria.length - 1;
+        }else{
+            imgAtual -= 1;
+        }
+
+        campoImgModal.src = _this.imgGaleria[imgAtual].src;
+        camposControleSlide[0].textContent = imgAtual + 1;
     }
 }

@@ -356,25 +356,25 @@ img{
 
 .modal{
     background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
     width: 100vw;
     height: 100vh;
     z-index: 9998;
-    margin: 0;
-    padding: 0;
+    max-width: 100%;
+    cursor: zoom-out;
 }
 
 .modal .container-img{
     position: relative;
+    width: 80vw;
 }
 
 .modal .container-img img{
-    width: 70vw;
+    width: 100%;
+    cursor: pointer;
 }
 
 .modal .container-img p{
@@ -398,22 +398,28 @@ img{
 }
 
 #btn-voltar{
-    /*position: absolute;
+    position: absolute;
     left: 0;
-    top: 50vh;*/
+    top: 50vh;
     color: #a9a9a9;
     font-size: 2.2em;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 #btn-avancar{
-    /*position: absolute;
-    right: -10;
-    top: 50vh;*/
+    position: absolute;
+    right: 0;
+    top: 50vh;
     color: #a9a9a9;
     font-size: 2.2em;
     cursor: pointer;
     z-index: 9999;
+    margin-right: 10px;
+}
+
+#btn-fechar:hover, #btn-voltar:hover, #btn-avancar:hover{
+    color: white;
 }
 
 /*CLASSE HIDDEN*/
@@ -576,7 +582,6 @@ img{
 }
 
 .redes-sociais a:hover{
-    
     box-sizing: border-box;
     box-shadow: 2px -2px 4px -6px black, -2px 2px 14px -6px black;
 }
