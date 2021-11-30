@@ -423,7 +423,7 @@ img{
 
 /*DEPOIMENTOS*/
 .depoimentos{
-    margin-bottom: 250px;
+    margin-bottom: 130px;
 }
 
 .depoimentos header{
@@ -474,13 +474,31 @@ img{
     margin-top: 25px;
 }
 
+.area-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.area-dots div{
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    width: 11px;
+    height: 11px;
+    margin-right: 15px;
+}
+
+.area-dots .ativo{
+    background-color: #fc5185;
+}
+
 /*NOVIDADES*/
 .novidades{
     background-color: #3f4f6b;
     padding: 50px 35px;
     position: relative;
     border-radius: 3px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .novidades header{
@@ -518,4 +536,47 @@ img{
 
 .novidades #btn-email:hover{
     background-color:  #bababa;
+}
+
+/*FOOTER*/
+.footer-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 80px auto;
+}
+
+.redes-sociais{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+}
+
+.redes-sociais li{
+    list-style-type: none;
+    width: 40px;
+    height: 40px;
+}
+
+.redes-sociais a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+
+.redes-sociais a img{
+    height: 20px;
+}
+
+.redes-sociais a:hover{
+    
+    box-sizing: border-box;
+    box-shadow: 2px -2px 4px -6px black, -2px 2px 14px -6px black;
 }
