@@ -1,0 +1,137 @@
+@media screen and (min-width: 700px) {
+    .container{
+        margin: 0 135px;
+    }
+
+    /*HEADER PRINCIPAL*/
+    .header-principal{
+        padding: 12px 135px;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    /*APRESENTAÇÃO*/
+    .apresentacao{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .apresentacao .container-txt{
+        width: 315px;
+    }
+
+    .apresentacao .container-txt h1{
+        margin: 0;
+    }
+
+    .apresentacao .container-txt p{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.1em;
+        margin: 10px 0 23px 0;
+    }
+
+    .apresentacao .container-txt a{
+        display: inline-block;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-right: 8px;
+    }
+
+    .apresentacao .container-img{
+        margin-top: 25px;
+        position: relative;
+        flex-basis: 350px;
+    }
+
+    .apresentacao .container-img img{
+        width: 100%;
+    }
+
+    /*SOBRE*/
+    .sobre{
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    .sobre .container-img{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sobre div:nth-child(1){
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .sobre p{
+        color: #212121;
+        font-size: 0.97em;
+    }
+
+    #btn-contatar{
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px 0;
+    }
+
+    /*SERVIÇOS*/
+    .lista-servicos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    .lista-servicos article{
+        background-color: #f0f0f0;
+        margin-top: 0;
+        border-radius: 3px;
+        padding: 50px 20px 10px 20px;
+        transition: transform .2s;
+        cursor: pointer;
+    }
+
+    .lista-servicos article img{
+        margin-bottom: 40px;
+    }
+
+    .container-clientes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 40px;
+        margin-top: 130px;
+    }
+
+    .clientes{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .contato-telefone p{
+        text-align: left;
+    }
+
+    .img-clientes{
+        margin-left: -50px;
+        width: 300px;
+    }
+
+    .img-clientes img{
+        width: 100%;
+        max-height: 200px;
+    }
+
+    .img-telefone{
+        margin-left: -80px;
+    }
+
+    .txt-telefone{
+        margin-left: -130px;
+    }
+}

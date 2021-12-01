@@ -604,7 +604,7 @@ img{
     box-shadow: 2px -2px 4px -6px black, -2px 2px 14px -6px black;
 }
 
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 700px) {
     .container{
         margin: 0 135px;
     }
@@ -613,7 +613,9 @@ img{
     .header-principal{
         padding: 12px 135px;
     }
+}
 
+@media screen and (min-width: 1025px){
     /*APRESENTAÇÃO*/
     .apresentacao{
         display: flex;
@@ -656,6 +658,20 @@ img{
     /*SOBRE*/
     .sobre{
         margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    .sobre .container-img{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sobre div:nth-child(1){
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .sobre p{
@@ -667,5 +683,169 @@ img{
         display: inline-block;
         padding: 10px 20px;
         margin: 20px 0;
+    }
+
+    /*SERVIÇOS*/
+    .lista-servicos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    .lista-servicos article{
+        background-color: #f0f0f0;
+        margin-top: 0;
+        border-radius: 3px;
+        padding: 50px 20px 10px 20px;
+        transition: transform .2s;
+        cursor: pointer;
+    }
+
+    .lista-servicos article img{
+        margin-bottom: 40px;
+    }
+
+    .container-clientes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 40px;
+        margin-top: 130px;
+    }
+
+    .clientes{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .contato-telefone p{
+        text-align: left;
+    }
+
+    .img-clientes{
+        margin-left: -50px;
+        width: 300px;
+    }
+
+    .img-clientes img{
+        width: 100%;
+        max-height: 200px;
+    }
+
+    .img-telefone{
+        margin-left: -80px;
+    }
+
+    .txt-telefone{
+        margin-left: -130px;
+    }
+
+    /*DEPOIMENTOS*/
+    .depoimentos{
+        margin-bottom: 130px;
+    }
+
+    .depoimentos header{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .area-depoimentos{
+        /*display: grid;
+        grid-template-columns: repeat(auto, 400px);
+        grid-template-rows: repeat(1, 1fr);*/
+        display: flex;
+    }
+
+    .area-depoimentos article{
+        background-color: #f0f0f0;
+        padding: 35px 30px;
+        display: inline-block;
+        min-width: 350px;
+        max-width: 800px;
+        margin-right: 15px;
+    }
+
+    .topo-article{
+        display: flex;
+    }
+
+    .topo-article img{
+        width: 320px;
+    }
+
+    .topo-article div:nth-child(1){
+        align-self: flex-end;
+        margin-bottom: 30px;
+    }
+
+    .topo-article div:nth-child(2){
+        margin-left: 15px;
+    }
+
+    .topo-article p span{
+        color: #9b9797;
+    }
+
+    .simbolo-nota{
+        text-align: right;
+        margin-top: 25px;
+    }
+
+    .area-dots{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .area-dots div{
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        width: 11px;
+        height: 11px;
+        margin-right: 15px;
+    }
+
+    .area-dots .ativo{
+        background-color: #fc5185;
+    }
+
+    /*NOVIDADES*/
+    .novidades{
+        height: 300px;
+    }
+
+    .novidades header{
+        margin-top: 80px;
+    }
+
+    .novidades div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .novidades #campo-email{
+        display: inline-block;
+        width: 250px;
+        height: 40px;
+        margin-right: 18px;
+    }
+    
+    .novidades #btn-email{
+        padding-left: 25px;
+        padding-right: 25px;;
+        margin-top: 10px;
+    }
+
+    /*FOOTER PRINCIPAL*/
+    .footer-principal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto 80px auto;
+        padding: 0 135px;
     }
 }
