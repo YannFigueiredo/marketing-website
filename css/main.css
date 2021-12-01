@@ -10,7 +10,7 @@ html, body{
 }
 
 h1{
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -76,18 +76,22 @@ img{
 
 /*HEADER PRINCIPAL*/
 .header-principal{
-    padding: 12px 0;
-    /*width: 100%;
+    padding: 12px 15px;
+    width: 100%;
     background-color: #fff;
     position: fixed;
     top: 0;
-    z-index: 9999*/;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    left: 0;
+    z-index: 9998;
+    box-sizing: border-box;
 }
 
 .container-header-mobile{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
 }
 
 .logo img{
@@ -99,9 +103,13 @@ img{
     border: 1px solid #e5e5e5;
     font-size: 1.5em;
     padding: 5px 15px;
-    border-radius: 3px;
     cursor: pointer;
+    border-radius: 3px;
     background-color: transparent;
+}
+
+#btn-menu:active{
+    border: 1px solid #e5e5e5;
 }
 
 .container-menu{
@@ -140,7 +148,7 @@ img{
 
 /*APRESENTAÇÃO*/
 .apresentacao{
-    margin-top: 30px;
+    margin-top: 130px;
     background-image: url('../img/slider-bg.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -344,6 +352,14 @@ img{
     transition: margin 0.4s;
 }
 
+.cards-servicos figure:nth-child(7){
+    margin-top: -60px;
+}
+
+.cards-servicos figure:nth-child(9){
+    margin-top: -180px;
+}
+
 .cards-servicos p{
     font-size: 0.8em;
 }
@@ -357,12 +373,14 @@ img{
 .modal{
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    z-index: 9998;
+    z-index: 9999;
     max-width: 100%;
     cursor: zoom-out;
 }
@@ -584,4 +602,70 @@ img{
 .redes-sociais a:hover{
     box-sizing: border-box;
     box-shadow: 2px -2px 4px -6px black, -2px 2px 14px -6px black;
+}
+
+@media screen and (min-width: 1025px){
+    .container{
+        margin: 0 135px;
+    }
+
+    /*HEADER PRINCIPAL*/
+    .header-principal{
+        padding: 12px 135px;
+    }
+
+    /*APRESENTAÇÃO*/
+    .apresentacao{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .apresentacao .container-txt{
+        width: 315px;
+    }
+
+    .apresentacao .container-txt h1{
+        margin: 0;
+    }
+
+    .apresentacao .container-txt p{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.1em;
+        margin: 10px 0 23px 0;
+    }
+
+    .apresentacao .container-txt a{
+        display: inline-block;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-right: 8px;
+    }
+
+    .apresentacao .container-img{
+        margin-top: 25px;
+        position: relative;
+        flex-basis: 350px;
+    }
+
+    .apresentacao .container-img img{
+        width: 100%;
+    }
+
+    /*SOBRE*/
+    .sobre{
+        margin-top: 120px;
+    }
+
+    .sobre p{
+        color: #212121;
+        font-size: 0.97em;
+    }
+
+    #btn-contatar{
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px 0;
+    }
 }

@@ -2,7 +2,7 @@ function gerenciarMenuMobile(config){
     this.menu = document.querySelector(config.menu);
     this.btnMenu = document.querySelector(config.btnMenu);
 
-    _this = this;
+    var _this = this;
 
     _this.btnMenu.addEventListener('click', function(){
         if(_this.menu.clientHeight == '0'){
