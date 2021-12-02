@@ -387,7 +387,7 @@ img{
 
 .modal .container-img{
     position: relative;
-    width: 80vw;
+    width: 65vw;
 }
 
 .modal .container-img img{
@@ -613,9 +613,27 @@ img{
     .header-principal{
         padding: 12px 135px;
     }
+
+    /*MODAL*/  
+    .modal .container-img{
+        position: relative;
+        width: 500px;
+    }
+
+    .modal .container-img img{
+        max-height: 100%;
+    }
+
+    #btn-fechar{
+        font-size: 3;
+    }
+
+    #btn-voltar, #btn-avancar{
+        font-size: 3em;
+    }
 }
 
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 1025px) {
     /*APRESENTAÇÃO*/
     .apresentacao{
         display: flex;
