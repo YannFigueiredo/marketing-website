@@ -841,11 +841,97 @@ img{
 
     /*FOOTER PRINCIPAL*/
     .footer-principal{
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        margin: 0 auto 80px auto;
         padding: 0 135px;
+    }
+
+    @media screen and (min-width: 1150px) {
+        .container{
+            margin: 0 40px;
+        }
+        
+        /*HEADER PRINCIPAL*/
+        .header-principal{
+            padding: 12px 40px;
+            width: 100%;
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+            left: 0;
+            z-index: 9998;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img{
+            width: 230px;
+        }
+        
+        #btn-menu{
+            display: none;
+        }
+        
+        .container-menu{
+            margin-top: 0px;
+        }
+        
+        .menu{
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            width: 520px;
+        }
+
+        /*APRESENTAÇÃO*/
+        .apresentacao{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .apresentacao .container-img{
+            flex-basis: 650px;
+            align-self: right;
+        }
+    }
+
+    /*SERVIÇOS*/
+    .lista-servicos{
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+
+    /*SERVIÇOS RECENTES*/
+    .cards-servicos{
+        line-height: 2;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    .cards-servicos figure:nth-child(7){
+        margin-top: 0;
+    }
+    
+    .cards-servicos figure:nth-child(9){
+        margin-top: 0;
+    }
+    
+    /*NOVIDADES*/
+    .novidades header img{
+        width: 150px;
+    }
+
+    .novidades #campo-email{
+        width: 400px;
+    }
+
+    /*FOOTER PRINCIPAL*/
+    .footer-principal{
+        padding: 0 40px;
     }
 }
