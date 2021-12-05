@@ -5,17 +5,17 @@ function carroselDepoimentos(config){
     this.boxitem = document.querySelector(config.boxitem);
 
     var _this = this;
+    var tamanhoItem;
 
     criarDots();
 
     var dot = _this.dots.querySelectorAll('div');
 
-    for(var i = 0; i < dot.length; i++)
-        console.log(dot[i]);
+    adaptarTamanhoContainer();
 
-    /*_this.boxitem.addEventListener('click', function(e){
-        console.log(e);
-    });*/
+    console.log(tamanhoItem);
+
+    window.addEventListener('resize', adaptarTamanhoContainer);
 
     dot.forEach(item => {
         item.addEventListener('click', function(){
@@ -50,8 +50,20 @@ function carroselDepoimentos(config){
     }
 
     function slideShow(index){
-        _this.boxitem.style.marginLeft = -410*index + 'px';
+        _this.boxitem.style.marginLeft = -tamanhoItem*index + 'px';
         document.querySelector('.area-dots .ativo').classList.remove('ativo');
         dot[index].classList.add('ativo');
+    }
+
+    function adaptarTamanhoContainer(){
+        if(window.innerWidth >= 700 && window.innerWidth < 1025){
+            tamanhoItem = 470;
+        }else if(window.innerWidth >= 1025){
+            tamanhoItem = 670;
+        }else{
+            tamanhoItem = 410;
+        }
+
+        slideShow(0);
     }
 }
