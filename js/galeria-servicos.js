@@ -95,24 +95,11 @@ function gerenciarGaleriaServicos(config){
     }
 
     function mostrarServico(servico){
-        //servico.style.width = '200px';
-        //servico.style.height = 'auto';
-        //servico.style.marginLeft = '0';
-        //servico.style.visibility = 'visible';
-        //servico.style.display = 'block';
-        //servico.style.position = 'static';
         servico.style.display = 'block';
     }
 
     function ocultarServico(servico){
-        //servico.style.width = '0px';
-        //servico.style.marginLeft = '-100%';
-        //servico.style.height = '0px';
-        //servico.style.visibility = 'hidden';
         servico.style.display = 'none';
-        //servico.style.overflow = 'hidden';
-        //servico.style.position = 'fixed';
-        //servico.style.visibility = 0;
     }
 }
 

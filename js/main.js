@@ -21,6 +21,8 @@
 
     var carrosel = new carroselDepoimentos({
         container: '.area-depoimentos',
-        item: '.area-depoimentos article'
+        boxitem: '.lista-depoimentos',
+        item: '.area-depoimentos article',
+        dots: '.area-dots'
     });
 }());

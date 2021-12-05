@@ -456,20 +456,29 @@ img{
 }
 
 .area-depoimentos{
-    /*display: grid;
-    grid-template-columns: repeat(auto, 400px);
-    grid-template-rows: repeat(1, 1fr);*/
+    margin: auto;
+    width: 410px;
+    overflow: hidden;
+}
+
+.lista-depoimentos{
+    margin: auto;
     display: flex;
     overflow: hidden;
+    transition: all .6s;
 }
 
 .area-depoimentos article{
     background-color: #f0f0f0;
     padding: 35px 30px;
+    box-sizing: border-box;
     display: inline-block;
-    min-width: 350px;
-    max-width: 350px;
-    margin-right: 15px;
+    min-width: 400px;
+    margin: 0 5px;
+}
+
+.area-depoimentos article:active{
+    cursor: grab;
 }
 
 .topo-article{
@@ -510,6 +519,7 @@ img{
     width: 11px;
     height: 11px;
     margin-right: 15px;
+    cursor: pointer;
 }
 
 .area-dots .ativo{
