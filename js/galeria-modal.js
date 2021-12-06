@@ -16,7 +16,7 @@ function gerenciarGaleriaModal(config){
 
     _this.imgGaleria.forEach(item => {
         item.addEventListener('click', function(e){
-            ativarModal();
+            ativarModal(); 
             campoImgModal.src = e.target.src;
             definirContadorImgAtual(e.target.src);
         });
