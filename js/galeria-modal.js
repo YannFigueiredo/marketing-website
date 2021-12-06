@@ -12,7 +12,6 @@ function gerenciarGaleriaModal(config){
     var campoImgModal = _this.modal.querySelector('img');
     var camposControleSlide = _this.controladorSlide.querySelectorAll('span');
 
-    desabilitarScroll();
     definirTotalImg();
 
     _this.imgGaleria.forEach(item => {
@@ -25,11 +24,16 @@ function gerenciarGaleriaModal(config){
 
     _this.btnFechar.addEventListener('click', function(){
         _this.modal.classList.add('hidden');
+        document.querySelector('html').style.overflow = 'auto';
+        document.querySelector('body').style.overflow = 'auto';
     });
 
     _this.modal.addEventListener('click', function(e){
-        if(e.target.nodeName != 'IMG' && e.target.nodeName != 'I')
+        if(e.target.nodeName != 'IMG' && e.target.nodeName != 'I'){
             _this.modal.classList.add('hidden');
+            document.querySelector('html').style.overflow = 'auto';
+            document.querySelector('body').style.overflow = 'auto';
+        }
     });
 
     _this.btnVoltar.addEventListener('click', voltarSlide);
@@ -40,6 +44,8 @@ function gerenciarGaleriaModal(config){
 
     function ativarModal(){
         _this.modal.classList.remove('hidden');
+        document.querySelector('html').style.overflow = 'hidden';
+        document.querySelector('body').style.overflow = 'hidden';
     }
 
     function definirContadorImgAtual(endereco){
@@ -53,14 +59,6 @@ function gerenciarGaleriaModal(config){
 
     function definirTotalImg(){
        camposControleSlide[1].textContent = _this.imgGaleria.length;
-    }
-
-    function desabilitarScroll(){
-        if(!_this.modal.classList.contains('hidden')){
-            document.querySelector('body').style.position = 'fixed';
-        }else{
-            document.querySelector('body').style.position = 'static';
-        }
     }
 
     function avancarSlide(){

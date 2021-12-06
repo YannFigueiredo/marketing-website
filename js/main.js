@@ -20,7 +20,6 @@
     });
 
     var carrosel = new carroselDepoimentos({
-        container: '.area-depoimentos',
         boxitem: '.lista-depoimentos',
         item: '.area-depoimentos article',
         dots: '.area-dots'
