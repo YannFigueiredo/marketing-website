@@ -6,6 +6,7 @@ function carroselDepoimentos(config){
 
     var _this = this;
     var tamanhoItem;
+    var itemAtual;
 
     criarDots();
 
@@ -13,31 +14,23 @@ function carroselDepoimentos(config){
 
     adaptarTamanhoContainer();
 
-    console.log(tamanhoItem);
-
     window.addEventListener('resize', adaptarTamanhoContainer);
 
     dot.forEach(item => {
         item.addEventListener('click', function(){
+            slideAuto = false;
             slideShow(item.id);
         });
     });
 
-    /*console.log(_this.container.clientWidth);
-    console.log(window.innerWidth);
+    document.querySelector('body').addEventListener('mousemove', function(event) {
+        posX = event.clientX;
+      });
 
-    console.log(_this.item.length);
-
-    for(var i = 0; i < _this.item.length; i++){
-        console.log(_this.item[i].clientWidth);
-    }*/
-
-    /*_this.item.forEach(elemento => {
-        elemento.addEventListener('mousedown', function(e){
-            console.log('evento disparado!');
-            e.target.style.marginLeft = '55px';
-        });
-    });*/
+    setInterval(function(){
+        if(itemAtual + 1 < _this.item.length)
+            slideShow(parseInt(document.querySelector('.area-dots .ativo').id) + 1);
+    }, 4000);
 
     function criarDots(){
         for(var i = 0; i < _this.item.length; i++){
@@ -53,6 +46,7 @@ function carroselDepoimentos(config){
         _this.boxitem.style.marginLeft = -tamanhoItem*index + 'px';
         document.querySelector('.area-dots .ativo').classList.remove('ativo');
         dot[index].classList.add('ativo');
+        itemAtual = index;
     }
 
     function adaptarTamanhoContainer(){
